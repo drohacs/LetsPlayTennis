@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://Drohacs:Danci14Danci14!@cluster0.hc71o2h.mongodb.net/?retryWrites=true&w=majority",
+    "jwtSecret": "defaultSecretToken"
+}  
