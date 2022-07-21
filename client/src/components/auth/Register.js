@@ -12,6 +12,12 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     password: "",
     password2: "",
   });
+  const {
+    username,
+    email,
+    password,
+    password2
+  } = formData;
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -93,5 +99,5 @@ Register.propTypes = {
   const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated
   });
-  
+
 export default connect(mapStateToProps, { setAlert, register })(Register);

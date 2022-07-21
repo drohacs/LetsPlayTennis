@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import Spinner from "../layout/Spinner";
 import { getCurrentProfile } from "../../actions/profile";
 
-const Dashbord = ({
+const Dashboard = ({
   getCurrentProfile,
   auth: { user },
   profile: { profile, loading },
@@ -36,7 +36,7 @@ const Dashbord = ({
   );
 };
 
-dashbord.propTypes = {
+dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
@@ -46,4 +46,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
 });
-export default dashbord(mapStateToProps, { getCurrentProfile })(Dashboard);
+export default dashboard(mapStateToProps, { getCurrentProfile })(Dashboard);
