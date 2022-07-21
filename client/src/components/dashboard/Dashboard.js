@@ -39,7 +39,7 @@ const Dashboard = ({
   );
 };
 
-dashboard.propTypes = {
+Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   profile: PropTypes.object.isRequired,
@@ -49,4 +49,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
   profile: state.profile,
 });
-export default dashboard(mapStateToProps, { getCurrentProfile })(Dashboard);
+export default Dashboard(mapStateToProps, { getCurrentProfile })(Dashboard);

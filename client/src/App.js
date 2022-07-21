@@ -8,7 +8,8 @@ import Alert from "./components/layout/Alert";
 import Dashboard from "./components/dashboard/Dashboard";
 import ProfileForm from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
-//Redux
+import Profiles from "./components/profiles/Profiles";
+import Profile from "./components/profile/Profile";
 import { Provider } from "react-redux";
 import store from "./store";
 import { loadUser } from "./actions/auth";
@@ -26,30 +27,32 @@ const App = () => {
   }, []);
 
   return (
-    <Provider>
+    <Provider store={store}>
       <Router>
-        <Fragment>
-          <Navbar />
-          <Alert />
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="register" element={<Register />} />
-            <Route path="login" element={<Login />} />
-            <Route path="profiles" element={<Profiles />} />
-            <Route path="profile/:id" element={<Profile />} />
-            <Route
-              path="dashboard"
-              element={<PrivateRoute component={Dashboard} />}
-            />
-            <Route
-              path="create-profile"
-              element={<PrivateRoute component={ProfileForm} />}
-            />
-          </Routes>
-          <Landing />
-        </Fragment>
+        <Navbar />
+        <Alert />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="profiles" element={<Profiles />} />
+          <Route path="profile/:id" element={<Profile />} />
+          <Route
+            path="dashboard"
+            element={<PrivateRoute component={Dashboard} />}
+          />
+          <Route
+            path="create-profile"
+            element={<PrivateRoute component={ProfileForm} />}
+          />
+          <Route
+            path="edit-profile"
+            element={<PrivateRoute component={ProfileForm} />}
+          />
+        </Routes>
       </Router>
     </Provider>
   );
 };
+
 export default App;
