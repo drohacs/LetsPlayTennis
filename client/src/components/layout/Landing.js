@@ -3,8 +3,8 @@ import { Link, Navigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const Landing = () => {
-    if(isAuthenticated) {
+const Landing = ({isAuthenticated}) => {
+    if( isAuthenticated ) {
         return <Navigate to="/dashboard" />;
     }
   return (

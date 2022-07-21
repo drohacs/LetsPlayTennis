@@ -5,8 +5,8 @@ import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Alert from "./components/layout/Alert";
-import Dashbord from "./components/dashboard/Dashboard";
-import CreateProfile from "./components/profile-forms/CreateProfile";
+import Dashboard from "./components/dashboard/Dashboard";
+import ProfileForm from "./components/profile-forms/CreateProfile";
 import PrivateRoute from "./components/routing/PrivateRoute";
 //Redux
 import { Provider } from "react-redux";
